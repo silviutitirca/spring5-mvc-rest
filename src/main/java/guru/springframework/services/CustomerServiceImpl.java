@@ -82,8 +82,15 @@ public class CustomerServiceImpl implements CustomerService {
             if(customerDTO.getLastName() != null){
                 customer.setLastName(customerDTO.getLastName());
             }
+            CustomerDTO returnDTO = customerMapper.customerToCustomerDTO(customerRepository.save(customer));
+            returnDTO.setCustomerUrl("/api/v1/customer/" + id);
 
-            return customerMapper.customerToCustomerDTO(customerRepository.save(customer));
+            return returnDTO;
         }).orElseThrow(RuntimeException::new);
+    }
+
+    @Override
+    public void deleteCustomerById(Long id) {
+        customerRepository.deleteById(id);
     }
 }
