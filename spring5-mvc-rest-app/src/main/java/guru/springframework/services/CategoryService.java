@@ -1,7 +1,6 @@
 package guru.springframework.services;
 
 import guru.springframework.api.v1.model.CategoryDTO;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 

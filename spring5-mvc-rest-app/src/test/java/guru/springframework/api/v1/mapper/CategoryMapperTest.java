@@ -4,7 +4,7 @@ import guru.springframework.api.v1.model.CategoryDTO;
 import guru.springframework.domain.Category;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author Silviu_Titirca on 12/23/2021
